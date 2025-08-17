@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Student</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f4f1f9, #e8e4f5); /* Updated gradient */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #6a53a3; /* Updated color */
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 0;
+            display: block;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #333;
+            transition: border 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #6a53a3; /* Updated border color */
+            outline: none;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: 48%;
+            padding: 12px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(135deg, #9a7cd8, #7f6fd7); /* Updated gradient */
+            color: #fff;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(135deg, #7f6fd7, #9a7cd8); /* Updated hover gradient */
+        }
+
+        input[type="reset"] {
+            background: #e74c3c;
+            color: #fff;
+        }
+
+        input[type="reset"]:hover {
+            background: #e67e22;
+        }
+
+        .message {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #2ecc71;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const idField = document.getElementById("id").value;
+            if (idField.trim() === "") {
+                alert("Student ID cannot be blank!");
+                return false;
+            }
+            if (isNaN(idField)) {
+                alert("Student ID must be a valid number!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Delete Student</h1>
+        <form action="DeleteStudentServlet" method="post" onsubmit="return validateForm()">
+            <label for="id">Enter Student ID:</label>
+            <input type="text" name="id" id="id" placeholder="Enter the student ID to delete" required>
+            
+            <div style="display: flex; justify-content: space-between;">
+                <input type="submit" value="Delete">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+        <div class="message">
+            <!-- Success or error messages can be displayed here -->
+            <!-- Example: <% if (request.getAttribute("message") != null) out.print(request.getAttribute("message")); %> -->
+        </div>
+    </div>
+</body>
+</html>
