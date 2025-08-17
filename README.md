@@ -1,6 +1,6 @@
 
 
-Uploading edutrack-smart  student managemet system.mp4…
+https://github.com/user-attachments/assets/ffc07feb-8711-4d85-8ad7-91133b271804
 
 
 # 📚 Student Management System  
@@ -50,6 +50,13 @@ It allows administrators to manage student records efficiently, including adding
 📤 Export Data (PDF/Excel)
 
 🎨 Enhanced UI with Bootstrap/Tailwind
+
+
+
+
+
+
+Uploading edutrack-smart  student managemet system.mp4…
 
 
 
