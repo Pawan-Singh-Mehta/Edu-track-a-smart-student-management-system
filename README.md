@@ -56,8 +56,6 @@ It allows administrators to manage student records efficiently, including adding
 
 
 
-Uploading edutrack-smart  student managemet system.mp4…
-
 
 
 
